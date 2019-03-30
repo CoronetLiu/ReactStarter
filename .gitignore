@@ -1,0 +1,5 @@
+# idea
+.idea/
+
+# 依赖
+node_modules/
