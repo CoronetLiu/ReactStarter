@@ -3,6 +3,7 @@ import { FormattedMessage } from "react-intl";
 import {Link} from 'react-router';
 import axios from 'axios';
 
+import {Row, Col} from 'antd';
 import Map from './Map';
 
 import './home.less';
@@ -34,7 +35,17 @@ export default class Home extends React.Component {
         return (
             <div className="main-home">
                 <p><FormattedMessage id="hello"/>-Home</p>
-                <Map/>
+                <Row gutter={12} className="home-row">
+                    <Col span={3}></Col>
+                    <Col span={21}>
+                        <Row gutter={12}>
+                            <Col span={20}>
+                                <Map />
+                            </Col>
+                            <Col span={4}></Col>
+                        </Row>
+                    </Col>
+                </Row>
             </div>
         );
     }
