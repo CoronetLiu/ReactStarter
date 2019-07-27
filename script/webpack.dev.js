@@ -5,13 +5,10 @@ const webpackConfig         = require("./webpack.config.js");
 const OpenBrowserPlugin     = require("open-browser-webpack-plugin");
 const HtmlWebpackPlugin     = require("html-webpack-plugin");
 const portfinder            = require("portfinder");
-const LessThemePlugin       = require("webpack-less-theme-plugin");
 const FriendlyErrorsPlugin  = require("friendly-errors-webpack-plugin");
 const HappyPack             = require("happypack");
 const os                    = require("os");
 const happyThreadPool       = HappyPack.ThreadPool({ size: os.cpus().length });
-// const themeConfig           = require("../src/theme.js");
-// const theme                 = themeConfig();
 
 require("babel-polyfill"); //兼容ie9,10配置
 
@@ -85,10 +82,7 @@ const devConfig = merge(webpackConfig, {
           loader: "css-loader"
         },
         {
-          loader: "less-loader",
-          // options: {
-          //     modifyVars: theme
-          // }
+          loader: "less-loader"
         }]
       },
       {
@@ -183,8 +177,7 @@ const devConfig = merge(webpackConfig, {
       }],
       threadPool: happyThreadPool,
       verbose:false
-    }),
-    // new LessThemePlugin({ theme: path.resolve(__dirname, "../src/theme.less") })
+    })
   ]
 });
 module.exports = new Promise((resolve, reject) => {

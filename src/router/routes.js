@@ -39,7 +39,8 @@ function onEnter(nextState, replace, callback) {
 function onChange(prevState, nextState, replace, callback) {
     callback();
 }
-const routes = [{
+const routes = [
+    {
         path: "/",
         onEnter: onEnter,
         onChange: onChange,

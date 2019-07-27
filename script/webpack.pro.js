@@ -3,18 +3,12 @@ let webpack                 = require("webpack");
 let merge                   = require("webpack-merge");
 let webpackConfig           = require("./webpack.config.js");
 let HtmlWebpackPlugin       = require("html-webpack-plugin");
-let BundleAnalyzerPlugin    = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-let ParallelUglifyPlugin    = require("webpack-parallel-uglify-plugin");
 let MiniCssExtractPlugin    = require("mini-css-extract-plugin");
 let OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 let UglifyJsPlugin          = require("uglifyjs-webpack-plugin");
-let serverConfig            = require("../resource/serverconfig/server.json");
-let themeConfig             = require("../src/theme.js");
-let theme                   = themeConfig();
 
 require("babel-polyfill");
 
-theme["@icon-url"] = `"${serverConfig.pro.serverBaseUrl + serverConfig.pro.context + serverConfig.fonts}"`;
 
 let proConfig = {
     devtool: false,
@@ -96,12 +90,6 @@ let proConfig = {
                         }
                     },
                     "less-loader"
-                    // {
-                    //     loader: "less-loader",
-                    //     options: {
-                    //         modifyVars: theme
-                    //     }
-                    // }
                 ]
             },
             {

@@ -6,11 +6,10 @@ const {
   Header, Footer, Sider, Content,
 } = Layout;
 const SubMenu = Menu.SubMenu;
-import "./main.less";
+import "./menu.less";
 import menuconfig from './AppMenuConfig';
-import $ from 'jquery';
 
-export default class Main extends React.Component {
+export default class Menu extends React.Component {
     constructor() {
         super();
         this.state={
