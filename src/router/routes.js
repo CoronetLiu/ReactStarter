@@ -39,14 +39,13 @@ function onEnter(nextState, replace, callback) {
 function onChange(prevState, nextState, replace, callback) {
     callback();
 }
-const routes = [
-    {
+const routes = [{
         path: "/",
         onEnter: onEnter,
         onChange: onChange,
         getComponent(nextState, cb) {
             require.ensure([], function(require) {
-                cb(null, require("../view/module/Main").default);
+                cb(null, require("../view/home/Home").default);
             });
         },
         indexRoute:{
