@@ -5,13 +5,16 @@ import intl from 'intl';
 import promis from 'es6-promise';
 import React from 'react';
 
-import 'antd/dist/antd.css';
-import appstore from './stores/AppStore';
 import cnLocale from './local/zh-CN';
+import appstore from './stores/AppStore';
 import Routes from './router/routes';
+
+import './util/amfe.js'
 
 import './style/app.less';
 import './style/magic.css';
+
+import 'antd/dist/antd.css';
 
 global.Intl = intl; //解决react intl的ie问题
 promis.polyfill(); //
