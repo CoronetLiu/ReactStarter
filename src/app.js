@@ -14,7 +14,7 @@ import './util/amfe.js'
 import './style/app.less';
 import './style/magic.css';
 
-import 'antd/dist/antd.css';
+// import 'antd/dist/antd.css';  //babelrc中已配置，无需引入
 
 global.Intl = intl; //解决react intl的ie问题
 promis.polyfill(); //
