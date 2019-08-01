@@ -3,6 +3,6 @@ module.exports = {
   locale: 'zh-CN',
   data: appLocaleData,
   messages: {
-    "hello":'React'
+    'hello': 'React',
   },
 };
