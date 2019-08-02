@@ -1,5 +1,4 @@
-import { Route, IndexRoute, IndexRedirect } from 'react-router';
-import { Router, hashHistory, browserHistory } from 'react-router';
+import { Route, IndexRoute, IndexRedirect, Router, hashHistory, browserHistory } from 'react-router';
 import cookie from 'js-cookie';
 import React from 'react';
 
@@ -48,7 +47,7 @@ const routes = [
     onChange: onChange,
     getComponent(nextState, cb) {
       require.ensure([], function(require) {
-        cb(null, require('../view/home/Home').default);
+        cb(null, require('../view/frame/Frame').default);
       });
     },
     indexRoute: {
@@ -65,6 +64,16 @@ const routes = [
           });
         },
       },
+      {
+        path: '/map',
+        onEnter: onEnter,
+        onChange: onChange,
+        getComponent(nextState, cb) {
+          require.ensure([], function(require) {
+            cb(null, require('../view/home/Map').default);
+          });
+        },
+      }
     ],
   }];
 
