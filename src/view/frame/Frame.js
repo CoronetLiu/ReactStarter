@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { FormattedMessage } from 'react-intl';
-import { Icon, Layout, Menu, Avatar} from 'antd';
+import { Icon, Layout, Menu, Avatar } from 'antd';
 import SubMenu from 'antd/lib/menu/SubMenu';
+
 const {
-  Header, Sider, Content
+  Header, Sider, Content,
 } = Layout;
 
 import './frame.less';
@@ -13,7 +14,7 @@ export default class Frame extends React.Component {
   constructor() {
     super();
     this.state = {
-      collapsed: false
+      collapsed: false,
     };
   }
 
@@ -50,7 +51,7 @@ export default class Frame extends React.Component {
             >
               <Menu.Item key="0">
                 <Link to={'/home'}>
-                  <Icon type="home" />
+                  <Icon type="home"/>
                   <span>Home</span>
                 </Link>
               </Menu.Item>
@@ -58,12 +59,12 @@ export default class Frame extends React.Component {
                 key="sub1"
                 title={
                   <span>
-              <Icon type="setting" />
-              <span>Setting</span>
+              <Icon type="setting"/>
+              <span>Map</span>
             </span>
                 }
               >
-                <Menu.Item key="1"><Link to={'/map'}>Map</Link></Menu.Item>
+                <Menu.Item key="1"><Link to={'/map'}>China</Link></Menu.Item>
                 <SubMenu key="sub2" title="Submenu">
                   <Menu.Item key="21">Option 1</Menu.Item>
                   <Menu.Item key="22">Option 2</Menu.Item>

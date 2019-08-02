@@ -70,10 +70,10 @@ const routes = [
         onChange: onChange,
         getComponent(nextState, cb) {
           require.ensure([], function(require) {
-            cb(null, require('../view/home/Map').default);
+            cb(null, require('../view/frame/Map').default);
           });
         },
-      }
+      },
     ],
   }];
 

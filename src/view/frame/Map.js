@@ -151,14 +151,24 @@ export default class Map extends React.Component {
   render() {
 
     return (
-      <div className="map">
-        <div className="title">
-          <span>{/*MAP*/}</span>
-        </div>
-        <ReactEcharts ref='echarts_react1'
-                      option={this.state.MapOption}
-                      style={{ height: '600px', width: '100%' }}/>
-      </div>
+
+      <Row gutter={12}>
+        <Col span={3}></Col>
+        <Col span={21}>
+          <Row gutter={12}>
+            <Col span={20} className="map">
+              <div className="title">
+                <span>MAP</span>
+              </div>
+              <ReactEcharts ref='echarts_react1'
+                            option={this.state.MapOption}
+                            style={{ height: '600px', width: '100%' }}/>
+            </Col>
+            <Col span={4}></Col>
+          </Row>
+        </Col>
+      </Row>
+
     );
   }
 }
