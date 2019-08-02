@@ -9,7 +9,7 @@ import cnLocale from './local/zh-CN';
 import appstore from './stores/AppStore';
 import Routes from './router/routes';
 
-import './util/amfe.js'
+// import './util/amfe.js'
 
 import './style/app.less';
 import './style/magic.css';
