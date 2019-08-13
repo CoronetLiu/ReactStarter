@@ -2,7 +2,6 @@ import React from 'react';
 import { Row, Col, Progress, Button, Radio } from 'antd';
 import { Link } from 'react-router';
 import ReactEcharts from 'echarts-for-react';
-import './home.less';
 import '../../util/china';
 
 var geoCoordMap = {
