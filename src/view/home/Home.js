@@ -13,15 +13,18 @@ export default class Home extends React.Component {
 
   componentDidMount() {
     axios({
-      url: '/proxy/v2/movie/in_theaters',
+      url: '/proxy/sug',
       method: 'get',
       params: {
-        city: '北京',
-        start: 0,
-        count: 10,
+        code: 'utf-8',
+        q: '手机'
       },
+      headers: {
+        'Authorization': 'CL',
+        'token':'00000000'
+      }
     }).then(function(res) {
-      console.log(res);
+      console.log('模拟请求->',res);
     }, function() {
       console.log('API请求失败...');
     });

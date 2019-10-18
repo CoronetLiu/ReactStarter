@@ -19,6 +19,7 @@ export default class Frame extends React.Component {
   }
 
   componentDidMount() {
+
   }
 
   toggleCollapsed = () => {
