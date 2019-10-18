@@ -39,7 +39,7 @@ const devConfig = merge(webpackConfig, {
     quiet: true,
     proxy: {
       '/proxy': {
-        target: 'https://api.douban.com/',
+        target: 'https://suggest.taobao.com',
         secure: true,         //是否校验证书
         changeOrigin: true,   //是否跨域
         ws: true,             //是否代理websockets

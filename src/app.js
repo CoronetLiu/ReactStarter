@@ -1,5 +1,5 @@
 import { addLocaleData, IntlProvider } from 'react-intl';
-import { LocaleProvider } from 'antd';
+import { ConfigProvider } from 'antd';
 import { Provider } from 'mobx-react';
 import intl from 'intl';
 import promis from 'es6-promise';
@@ -9,7 +9,7 @@ import cnLocale from './local/zh-CN';
 import appstore from './stores/AppStore';
 import Routes from './router/routes';
 
-// import './util/amfe.js';
+import './util/amfe.js';  //移动端开发需要
 
 import './style/app.less';
 import './style/magic.css';
@@ -21,10 +21,10 @@ promis.polyfill(); //
 addLocaleData(cnLocale.data);
 module.exports = (
   <IntlProvider locale={cnLocale.locale} messages={cnLocale.messages}>
-    <LocaleProvider>
+    <ConfigProvider>
       <Provider {...appstore}>
         <Routes/>
       </Provider>
-    </LocaleProvider>
+    </ConfigProvider>
   </IntlProvider>
 );

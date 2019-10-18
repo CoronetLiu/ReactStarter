@@ -65,20 +65,20 @@ const routes = [
         },
       },
       {
-        path: '/map',
+        path: '/test',
         onEnter: onEnter,
         onChange: onChange,
         getComponent(nextState, cb) {
           require.ensure([], function(require) {
-            cb(null, require('../view/frame/Map').default);
+            cb(null, require('../view/home/Test').default);
           });
         },
-      },
+      }
     ],
   }];
 
 export default class Routers extends React.Component {
   render() {
-    return <Router history={hashHistory}>{routes}</Router>;
+    return <Router history={browserHistory}>{routes}</Router>;
   }
 }
